@@ -1,0 +1,35 @@
+{
+  "name": "aplicacao-1",
+  "version": "1.0.0",
+  "dependencies": {
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts-wp5": "5.10.7",
+    "serve": "^12.0.0"
+  },
+  "scripts": {
+    "prebuild": "rm -rf 615",
+    "build": "react-app-rewired build --scripts-version react-scripts-wp5",
+    "postbuild": "mv build 615",
+    "serve": "PORT=5000 serve -s . -C",
+    "zip": "cd build/ && bestzip ../bundle.zip *"
+  },
+  "devDependencies": {
+    "bestzip": "^2.1.7",
+    "react-app-rewired": "^2.1.7",
+    "webpack": "5.10.3"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
